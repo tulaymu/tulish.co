@@ -1,0 +1,12 @@
+{% if gallery %}
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    {% for image in gallery %}
+      <a href="/assets/Diverxo/{{ image }}" target="_blank">
+        <img src="/assets/Diverxo/{{ image }}" alt="Diverxo Dish {{ loop.index }}">
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No images found!</p>
+{% endif %}
