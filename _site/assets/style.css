@@ -1,16 +1,26 @@
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.2rem;
   margin: 2rem 0;
+  justify-items: center;
 }
+
 .gallery-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(160,82,45,0.13);
-  transition: transform 0.18s, box-shadow 0.18s;
-  cursor: pointer;
+  display: block;
+  width: 200px !important;        /* Add this line */
+  height: 140px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(160,82,45,0.13) !important;
+  background: #fff !important;
+  transition: transform 0.18s, box-shadow 0.18s !important;
+  cursor: pointer !important;
+  margin: 0 auto !important;
 }
+body { background: pink !important; }
+
+
 .gallery-grid img:hover {
   transform: scale(1.06);
   box-shadow: 0 4px 18px rgba(160,82,45,0.24);
